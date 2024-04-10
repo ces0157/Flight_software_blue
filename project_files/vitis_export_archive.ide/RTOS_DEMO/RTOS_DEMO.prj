@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="RTOS_DEMO" location="C:/Users/caleb/workspace/RTOS_DEMO" platform="C:/Users/caleb/workspace/Chandler_test/export/Chandler_test/Chandler_test.xpfm" platformUID="xilinx:ultra96v2::0.0(custom)" systemProject="RTOS_DEMO_system" sysConfig="Chandler_test" runtime="C/C++" cpu="freertos10_xilinx_domain" cpuInstance="psu_cortexa53_0" os="freertos10_xilinx" mssSignature="1123b7fc7daa072de1d9bcef8b01e55d">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.1250059682">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.465205283" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="freertos_hello_world" hasBspSettings="true"/>
+</sdkproject:SdkProject>
