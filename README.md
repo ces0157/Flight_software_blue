@@ -58,6 +58,12 @@ The best and easisest way to make changes to the code is to use the "vitis_expor
 6. You should now have an .img file in your directory. If you want to see that the partition was formatted correclty go to [little-fs-disk-image-viewer](https://tniessen.github.io/littlefs-disk-img-viewer/) to visualize your results.
 
 ## More documentation
-For more documentation, see the documentation folder where we have more documents on building a support backage, creating a project from an XSA file, and working with different but similar DEMO's
+For more documentation, see the documentation folder where we have more documents on building a support backage, creating a project from an XSA file, and working with different but similar DEMO's.
+
+1. Note: Not all of the AVNET DEMO may not be applicable. If you want to build a new BSP then you will need to read the first section, otherwise skip to the second section. Addtionally, this DEMO disables the secureboot, do not do this if you are trying to use the SD-card. If you want to follow the demo it is fine, but if you want to add an sd-card then don't change the scure boot mode and and `-machine secure=on` paramater in qemu. However, it is best to follow the steps laid out in the Modifying and Building section if you want to work with the current code.
+
+2. Note: The Zynq 7000 doucmentation is really only an early demo we had used an not really applicable to the board. However it is a good tool to practice with.
+
+
 
 
