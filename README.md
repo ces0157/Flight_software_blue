@@ -1,5 +1,6 @@
-# README for NASA Flight Software Blue team.
-Provided above are all files for the Spring 2024 Senior Design Team. We have intergrated and built FreeRTOS with the Xilinx SDK and [LittleFS](https://github.com/littlefs-project/littlefs) to be tested through [QEMU](https://www.qemu.org/). Throughout this Document we will discuss how to interact with the files in the repository and any addtional nesseccary documentation to get you started up quickly. We are excited you are taking a look at the cool work we have done this semester!
+# README for ACSI TASCI Flight Software Blue team.
+Hello and welcome to our github. We are a part of the [Alabama Cubesat Initative](https://cubesatinitiative.org/home) Senior Design Team, working towards sending a sattelite into space in 2025!
+Provided above are all files for the Spring 2024 Senior Design Team, where we have intergrated and built FreeRTOS with the Xilinx SDK and [LittleFS](https://github.com/littlefs-project/littlefs) to be tested through [QEMU](https://www.qemu.org/). Throughout this Document we will discuss how to interact with the files in the repository and any addtional nesseccary documentation to get you started up quickly. We are excited you are taking a look at the cool work we have done this semester!
 
 
 # Prequistie Installations
