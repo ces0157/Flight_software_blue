@@ -58,3 +58,5 @@ Like I said before. The best way to make changes to the code is to use the "viti
    `python3 format.py`
 6. You should now have an .img file in your directory. If you want to see that the partition was formatted correclty go to [little-fs-disk-image-viewer](https://tniessen.github.io/littlefs-disk-img-viewer/) to visualize your results.
 
+## For more detailed documentation see the 
+
