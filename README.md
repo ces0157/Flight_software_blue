@@ -13,7 +13,6 @@ In order to build everything in this repository you are going to need a view thi
 7. GDB-multiarch for debugging
 
 ## FILE Layout
-- The "project folder" contains all the code used for this build. We will come back to this in a moment, but this is really only used for quick interaction with the code. For actually building and making changes, please use the "vitis_export_archive.ide"
 - The "format.py" is a python script that will format a virtual SD partition (must be run in a virtual environment)
 - The "RTOS_DEMO.elf" file is the most recent Board executable containing FreeRTOS, LittleFS, and the board support package. This will be used with QEMU emulation
 - The "system.dtb" is a device tree of the AVNET Ultra96-v2 Zynq Ultrascale+ ZU3EG Development board, use for QEMU emulation
@@ -35,7 +34,7 @@ If you don't care about the project files and just want to run, then this is the
 7. Now you can operate within GDB and test the code (our current test code is in main function. In the documentation section of this repository, there is a more detailed description on testing your code.
 
 ## Modifying and Building
-Like I said before. The best way to make changes to the code is to use the "vitis_export_arhive.ide.zip", the platform code provided in the github is nothing more than a quick way to look at current code sturucutre.
+The best and easisest way to make changes to the code is to use the "vitis_export_arhive.ide.zip"
 1. Once you have this file downloaded, open Vits Classic 2023.2
 2. Once this is open select a workspace for your new project
 3. Go to File -> import -> Vitis project exported zip file
@@ -58,5 +57,7 @@ Like I said before. The best way to make changes to the code is to use the "viti
    `python3 format.py`
 6. You should now have an .img file in your directory. If you want to see that the partition was formatted correclty go to [little-fs-disk-image-viewer](https://tniessen.github.io/littlefs-disk-img-viewer/) to visualize your results.
 
-## For more detailed documentation see the 
+## More documentation
+For more documentation, see the documentation folder where we have more documents on building a support backage, creating a project from an XSA file, and working with different but similar DEMO's
+
 
