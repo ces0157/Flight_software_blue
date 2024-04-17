@@ -46,4 +46,15 @@ Like I said before. The best way to make changes to the code is to use the "viti
 8. Go to Project -> Build All if you want to build everything.
 9. Once the project has been built you will find the .elf file in RTOS_DEMO -> Binaries -> RTOS_DEMO.elf
 10. You can also find the BOOT.BIN file, which will be nesscarry for the real SD Card in RTOS_DEMO_system -> sd_card -> BOOT.BIN
+11. Once you have these files, you will need to copy them over to WSL or Linux (YES this is very annoying but the only real work around right now between VITIS and QEMU,gdb,etc).
+12. Now take a look at the quick start to see how to run the files.
+
+## Making a custom SD image
+1. If you want to make your own custom SD image (which is reccomended) you are going to want to use the format.py script
+2. In this script you will see a template on how the code is setup to format the partition
+3. You will first want to initialize a virtual enviroment, whether it be conda or a python virtual enviroment.
+4. Once this is done, install [LittleFs-python](https://pypi.org/project/littlefs-python/). The page also has documentation on how it is setup. Refer to LittleFS for more detailed function use
+5. After you have installed the LittleFs-python package in the vritual envrioment, run the script:
+   `python3 format.py`
+6. You should now have an .img file in your directory. If you want to see that the partition was formatted correclty go to [little-fs-disk-image-viewer](https://tniessen.github.io/littlefs-disk-img-viewer/) to visualize your results.
 
