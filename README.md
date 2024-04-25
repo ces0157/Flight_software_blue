@@ -16,23 +16,29 @@ In order to build everything in this repository you are going to need a view thi
 ## FILE Layout
 - The "format.py" is a python script that will format a virtual SD partition (must be run in a virtual environment)
 - The "RTOS_DEMO.elf" file is the most recent Board executable containing FreeRTOS, LittleFS, and the board support package. This will be used with QEMU emulation
-- The "system.dtb" is a device tree of the AVNET Ultra96-v2 Zynq Ultrascale+ ZU3EG Development board, use for QEMU emulation
+- The "system.dtb" is a device tree of the AVNET Ultra96-v2 Zynq Ultrascale+ ZU3EG Development board, used for QEMU emulation
 - The "sd.img" is the virtual SD card.
 - The "q-run.sh" is a bashscript that will run QEMU emulating the target board (assuming you have the .elf or executable file)
 - The "vitis_export_arhive.ide.zip" is the most important part of this whole repository. It contains all the code and support to be used within the Xilinix/ Vitis platform. If you want to make any modification to the code this is the file you want to use. But don't worry we will show you how to set it up!
 
 ## Quick Start
 If you don't care about the project files and just want to run, then this is the section for you. All you need is the sd card, RTOS_DEMO.elf, the device tree, and the bash script.
-1. In a WSL or linux terminal run:
+1. After downloading the repository, run the following command in a WSL or linux terminal (preferably Ubuntu):
 `$bash q-run.sh`
-2. You will be prompted to enter a file location of your .elf file, enter the path to it.
-3. After this run you should see a qemu window pop open, which mean's the hardware is being emulated running!
-4. If you want to test the actual exectuable file code run :
+2. You will be prompted to enter a file location of your .elf file, enter the path to it. (i.e /path/to/ROTS_DEMO.elf)
+3. After this run you should see a qemu window pop open, which mean's the hardware is being emulated and running!
+4. If you want to test the actual exectuable file code run the following command in a new Window :
 `$gdb-multiarch RTOS_DEMO.elf`
-5. This will open a new GDB session. However we are not connected to the actual hardware yet, run:
+5. This will open a new GDB session. Enusre that the the architecutre is set to arm you can do this by running this command:
+`$set architecture arm`
+8. We still have not connected to the actual hardware yet. In order to do so run:
    `$target remote localhost:1234`
-6. If succesfull you should see something along the lines of vector table <0,0,0,0....0>
-7. Now you can operate within GDB and test the code (our current test code is in main function. In the documentation section of this repository, there is a more detailed description on testing your code.
+9. If succesfull you should see something along the lines of vector table <0,0,0,0....0>
+10. Now you can operate within GDB and test the code (our current test code is in main function)
+11. If using our code run:
+    `$break main`
+    `$c`
+12. You should now be in the main function of our program use typical GDB functions (next, step, and continue) to go through the code of this program
 
 ## Modifying and Building
 The best and easisest way to make changes to the code is to use the "vitis_export_arhive.ide.zip"
@@ -58,12 +64,6 @@ The best and easisest way to make changes to the code is to use the "vitis_expor
    `python3 format.py`
 6. You should now have an .img file in your directory. If you want to see that the partition was formatted correclty go to [little-fs-disk-image-viewer](https://tniessen.github.io/littlefs-disk-img-viewer/) to visualize your results.
 
-## More documentation
-For more documentation, see the documentation folder where we have more documents on building a support backage, creating a project from an XSA file, and working with different but similar DEMO's.
-
-1. Note: Not all of the AVNET DEMO may not be applicable. If you want to build a new BSP then you will need to read the first section, otherwise skip to the second section. Addtionally, this DEMO disables the secureboot, do not do this if you are trying to use the SD-card. If you want to follow the demo it is fine, but if you want to add an sd-card then don't change the scure boot mode and and `-machine secure=on` paramater in qemu. However, it is best to follow the steps laid out in the Modifying and Building section if you want to work with the current code.
-
-2. Note: The Zynq 7000 doucmentation is really only an early demo we had used an not really applicable to the board. However it is a good tool to practice with.
 
 
 
